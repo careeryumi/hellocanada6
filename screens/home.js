@@ -10,7 +10,7 @@ export default function Home({ navigation }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [reviews, setReviews] = useState([
     { title: 'Ontario', rating: 5, body: 'lorem ipsum', key: '1' },
-    { title: 'BC', rating: 4, body: 'lorem ipsum', key: '2' },
+    { title: 'BCc', rating: 4, body: 'lorem ipsum', key: '2' },
     { title: 'NB', rating: 3, body: 'lorem ipsum', key: '3' },
   ]);
 

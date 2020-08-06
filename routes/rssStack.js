@@ -1,24 +1,24 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import React from 'react';
 import Header from '../shared/header';
-import About from '../screens/about';
+import Rss from '../screens/rss';
 
 const screens = {
-  About: {
-    screen: About,
+  Rss: {
+    screen: Rss,
     navigationOptions: ({ navigation }) => {
       return {
-        headerTitle: () => <Header title='HelloCanada.ca' navigation={navigation} />
+        headerTitle: () => <Header title='RSS' navigation={navigation} />
       }
     },
   },
 }
 
-const AboutStack = createStackNavigator(screens, {
+const RssStack = createStackNavigator(screens, {
   defaultNavigationOptions: {
     headerTintColor: '#444',
     headerStyle: { backgroundColor: '#eee', height: 60 },
   }
 });
 
-export default AboutStack;
+export default RssStack;
