@@ -1,25 +1,24 @@
 import { createStackNavigator } from 'react-navigation-stack';
-import NewsFeed from '../screens/newsfeed';
-import Header from '../shared/header';
 import React from 'react';
-
+import Header from '../shared/header';
+import Manitoba from '../screens/manitoba';
 
 const screens = {
-  NewsFeed: {
-    screen: NewsFeed,
+    Manitoba: {
+    screen: Manitoba,
     navigationOptions: ({ navigation }) => {
       return {
-        headerTitle: () => <Header navigation={navigation} title=' Newsfeed' />,
+        headerTitle: () => <Header title=' Manitoba' navigation={navigation} />
       }
-    }
+    },
   },
 }
 
-const NewsFeedStack = createStackNavigator(screens, {
+const ManitobaStack = createStackNavigator(screens, {
   defaultNavigationOptions: {
     headerTintColor: '#444',
     headerStyle: { backgroundColor: '#eee', height: 60 },
   }
 });
 
-export default NewsFeedStack;
+export default ManitobaStack;

@@ -9,7 +9,7 @@ const screens = {
     screen: Home,
     navigationOptions: ({ navigation }) => {
       return {
-        headerTitle: () => <Header title='HelloCanada.ca' navigation={navigation} />
+        headerTitle: () => <Header title=' HelloCanada.ca' navigation={navigation} />
       }
     },
   },

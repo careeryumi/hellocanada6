@@ -8,7 +8,7 @@ const screens = {
       screen: Login,
       navigationOptions: ({ navigation }) => {
         return {
-          headerTitle: () => <Header navigation={navigation} title='Login' />,
+          headerTitle: () => <Header navigation={navigation} title=' Login' />,
         }
       }
     },

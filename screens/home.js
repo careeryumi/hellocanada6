@@ -9,9 +9,9 @@ import ReviewForm from './reviewForm';
 export default function Home({ navigation }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [reviews, setReviews] = useState([
-    { title: 'Ontario', rating: 5, body: 'lorem ipsum', key: '1' },
-    { title: 'BCc', rating: 4, body: 'lorem ipsum', key: '2' },
-    { title: 'NB', rating: 3, body: 'lorem ipsum', key: '3' },
+    { title: 'How express entry works', rating: 5, body: 'We rank candidates in the pool using a points-based system called the Comprehensive Ranking System (CRS).', key: '1' },
+    { title: 'What changes have recently been made to Express Entry?', rating: 4, body: 'Changes as of June 6, 2017', key: '2' },
+    // { title: 'NB', rating: 3, body: 'lorem ipsum', key: '3' },
   ]);
 
   const addReview = (review) => {

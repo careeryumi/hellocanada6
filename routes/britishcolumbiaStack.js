@@ -1,24 +1,24 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import React from 'react';
 import Header from '../shared/header';
-import Rss from '../screens/rss';
+import Britishcolumbia from '../screens/britishcolumbia';
 
 const screens = {
-  Rss: {
-    screen: Rss,
+  Britishcolumbia: {
+    screen: Britishcolumbia,
     navigationOptions: ({ navigation }) => {
       return {
-        headerTitle: () => <Header title=' Government News' navigation={navigation} />
+        headerTitle: () => <Header title=' British Columbia' navigation={navigation} />
       }
     },
   },
 }
 
-const RssStack = createStackNavigator(screens, {
+const BritishcolumbiaStack = createStackNavigator(screens, {
   defaultNavigationOptions: {
     headerTintColor: '#444',
     headerStyle: { backgroundColor: '#eee', height: 60 },
   }
 });
 
-export default RssStack;
+export default BritishcolumbiaStack;

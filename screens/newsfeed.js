@@ -2,14 +2,16 @@ import React from 'react';
 import {StyleSheet, View, Text, ActivityIndicator, FlatList, Dimensions, Image, TouchableWithoutFeedback, Linking, share, Share} from 'react-native';
 import {globalStyles} from '../styles/global';
 
+
 export default class NewsFeed extends React.Component{
     state={
         news:[],
         loading: true
     }
 
+    // fetch('http://newsapi.org/v2/everything?q=immigration&top-headlines?country=ca&from=2020-08-04&sortBy=publishedAt&apiKey=59fc331f34fa4ea78811e929f7a8564a')
     fetchnews = () =>{
-        fetch('http://newsapi.org/v2/everything?q=immigration&top-headlines?country=ca&from=2020-08-04&sortBy=publishedAt&apiKey=59fc331f34fa4ea78811e929f7a8564a')
+        fetch('http://newsapi.org/v2/everything?q=Ontario&top-headlines?q=Immigration&top-headlines?country=ca&from=2020-08-05&sortBy=publishedAt&apiKey=59fc331f34fa4ea78811e929f7a8564a')
         .then((rest) => rest.json())
         .then((response)=>{
             this.setState({
@@ -36,7 +38,7 @@ export default class NewsFeed extends React.Component{
            return(
             <View style={styles.container}>
                 <View style={styles.header}>
-                    <Text style={{fontSize:25, color:'#fff'}}>Ontario Newsfeed</Text>
+                    <Text style={{fontSize:25, color:'#fff'}}>Immigration Newsfeed</Text>
                     {/* <Text style={{fontSize:35, color:'#fff'}}>Headline</Text> */}
                 </View>
                 <View style={styles.news}>

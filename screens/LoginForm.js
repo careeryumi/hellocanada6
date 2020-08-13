@@ -5,6 +5,7 @@ import Logo from './Logo';
 import EmailAndPassword from './EmailAndPassword';
 
 const LoginForm = () => {
+
     return (
         <View style ={styles.container}>
             {/* <View style={styles.logoContainer}>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "469980143557",
+    "firebase_url": "https://ucanada-f9118.firebaseio.com",
+    "project_id": "ucanada-f9118",
+    "storage_bucket": "ucanada-f9118.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469980143557:android:5be2d8b0fd2a58ade575ac",
+        "android_client_info": {
+          "package_name": "com.astraapps.hellocanada6"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "469980143557-b1kcihvfngjb8cg93jh1f2jh57f7bif5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyPoByhorbJTPYn_l_FCKvk_d-pnBB5Vo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "469980143557-b1kcihvfngjb8cg93jh1f2jh57f7bif5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "469980143557-3nnije48at6kpl0ulksqj6qohhle0u0j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "host.exp.exponent"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

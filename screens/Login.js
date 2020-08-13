@@ -7,9 +7,15 @@ import Articles from './Articles';
 
 // import firebase from 'firebase/app';
 import firebase from 'firebase';
+import {Permissions, Notification} from 'expo';
 // import 'firebase/auth';
-
 // import fire from './fire';
+
+import { createStackNavigator } from 'react-navigation-stack';
+import LoginScreen from './LoginScreen';
+import LoadingScreen from './LoadingScreen';
+import DashboardScreen from './DashboardScreen';
+
 
 class Login extends Component {
 
@@ -36,8 +42,16 @@ class Login extends Component {
       firebase.auth().onAuthStateChanged(user=> {
         if(user){
           this.setState({
-            loggedIn:true
+            loggedIn:true,
           })
+          console.log(user);
+          // var database = firebase.database();
+          // var user = firebase.auth().currentUser;
+            firebase.database().ref('/users/' + user.uid).set({
+              Email:user.email,
+              token:token
+            });
+
         }else{
           this.setState({
             loggedIn:false

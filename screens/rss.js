@@ -10,7 +10,6 @@ export default class Rss extends React.Component{
         loading: true
     }
 
-
     fetchnews = () =>{
         fetch('https://www.canada.ca/en/immigration-refugees-citizenship.atom.xml')
         .then((rest) => rest.text())
@@ -35,7 +34,7 @@ export default class Rss extends React.Component{
            return(
             <View style={styles.container}>
                 <View style={styles.header}>
-                    <Text style={{fontSize:25, color:'#1f2916'}}>Government Rss</Text>
+                    <Text style={{fontSize:22, color:'#1f2916'}}>News from Government of Canada</Text>
                     {/* <Text style={{fontSize:35, color:'#fff'}}>Headline</Text> */}
                 </View>
                 <View style={styles.news}>
@@ -44,9 +43,9 @@ export default class Rss extends React.Component{
                     renderItem={({item})=>{
                         return (
                           <TouchableWithoutFeedback onPress={()=>Linking.openURL(item.id)}>
-                            <View style ={{width:400, height: 90, backgroundColor:'#fff', marginBottom:15}}>
+                            <View style ={{width:370, height: 90, backgroundColor:'#fff', marginBottom:15}}>
                                 <View style={styles.gradient}>
-                                <Text style={{position:'absolute', bottom:0, color:'#fff', fontSize:20, padding:5}}>{item.title}</Text>
+                                <Text style={{position:'absolute', bottom:0, color:'#fff', fontSize:20, padding:11}}> {item.title}</Text>
                                 </View>
                             </View>
                           </TouchableWithoutFeedback>
@@ -62,19 +61,20 @@ export default class Rss extends React.Component{
 const styles = StyleSheet.create({
   container:{
       flex:1,
-      backgroundColor:'#ffe0cf'
+      backgroundColor:'#ffe0cf',
   },
   header:{
       padding:30
   },
   news:{
-      alignSelf: 'center'
+      alignSelf: 'center',
+      backgroundColor:'#ffe0cf',
   },
   gradient :{
       width:'100%',
       height: '100%',
       backgroundColor: 'rgba(0,0,0,0.5)',
-      // borderRadius:15
+      borderRadius:10
   }
 
 })

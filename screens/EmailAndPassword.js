@@ -1,12 +1,37 @@
 import React, { Component } from 'react';
-import {StyleSheet, View, Text, TextInput, TouchableOpacity} from 'react-native';
+import {StyleSheet, View, Text, TextInput, TouchableOpacity, Button} from 'react-native';
 import {globalStyles} from '../styles/global';
 // import firebase from 'firebase/app';
 import firebase from 'firebase';
 // import 'firebase/auth';
+import Expo from 'expo';
+// import * as Google from 'expo-google-app-auth';
 
 class EmailAndPassword extends Component {
-  
+
+  // googleSignUpPress = async()=> {
+  //       try {
+  //         const result = await Google.logInAsync({
+  //           behavior:'web',
+  //           androidClientId: 402776916324-bmqt3q3651u738i1keeuknsnpfq7h9lr.apps.googleusercontent.com,
+  //           // iosClientId: YOUR_CLIENT_ID_HERE,
+  //           scopes: ['profile', 'email'],
+  //         });
+      
+  //         console.log("ab");
+  //         if (result.type === 'success') {
+  //           console.log("success");
+  //           return result.accessToken;
+  //         } else {
+  //           console.log("fail");
+  //           // return { cancelled: true };
+  //         }
+  //       } catch (e) {
+  //         console.log("error");
+  //         // return { error: true };
+  //       }
+  //     }
+
     state={
         email:'',
         password:'',
@@ -20,6 +45,7 @@ class EmailAndPassword extends Component {
         .catch(error =>{this.setState({
             error:error.message
         })})
+
     }
 
     onSignUpPress = () => {
@@ -59,10 +85,16 @@ class EmailAndPassword extends Component {
                 <Text style={styles.buttonText}>Sign up</Text>
             </TouchableOpacity>
 
+            <TouchableOpacity style={styles.buttonContainer} onPress= {this.googleSignUpPress}>
+                <Text style={styles.buttonText}>google sign up</Text>
+            </TouchableOpacity>
+
+
             <Text style={styles.errorText}>
                     {this.state.error}
             </Text>
 
+            {/* <Button title="Sign in with google" onPress={()=>this.signInWithGoogleAsync()}></Button> */}
         </View>
           );
     }
